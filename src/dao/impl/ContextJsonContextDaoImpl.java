@@ -1,30 +1,31 @@
 package dao.impl;
 
-import dao.EntityDao;
+import dao.ContextDao;
 import entity.AbstractEntity;
+import entity.Context;
 
 import java.util.List;
 
 /**
  * Created by Alex on 14.05.2015.
  */
-public class ContextJsonEntityDaoImpl  implements EntityDao{
-    @Override
-    public List<AbstractEntity> select() {
+public class ContextJsonContextDaoImpl implements ContextDao {
+
+    public List<Context> select() {
         return null;
     }
 
-    @Override
+
     public boolean delete(int id) {
         return false;
     }
 
-    @Override
+
     public boolean insert(AbstractEntity entity) {
         return false;
     }
 
-    @Override
+
     public boolean update(AbstractEntity entity) {
         return false;
     }

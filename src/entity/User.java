@@ -9,12 +9,13 @@ public class User extends AbstractEntity {
     }
 
     public User(String name) {
-        super(name);
+        this.name = name;
     }
 
     public User(int id, String name) {
-        super(id, name);
 
+        this.name = name;
+        this.id = id;
     }
 
     @Override
@@ -37,11 +38,4 @@ public class User extends AbstractEntity {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

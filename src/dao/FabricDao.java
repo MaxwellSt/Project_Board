@@ -5,10 +5,10 @@ package dao;
  */
 public interface FabricDao {
 
-    boolean openConnection(EntityDao entityDao);
+    boolean openConnection(ContextDao contextDao);
 
-    boolean closeConnection(EntityDao entityDao);
+    boolean closeConnection(ContextDao contextDao);
 
-    EntityDao dataSource(EntityDao entityDao);
+    ContextDao dataSource(ContextDao contextDao);
 
 }

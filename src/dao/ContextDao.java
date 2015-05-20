@@ -2,12 +2,13 @@ package dao;
 
 
 import entity.AbstractEntity;
+import entity.Context;
 
 import java.util.List;
 
-public interface EntityDao {
+public interface ContextDao {
 
-    List<AbstractEntity> select();
+    List<Context> select();
 
     boolean delete(int id);
 

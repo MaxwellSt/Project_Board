@@ -1,32 +1,32 @@
 package dao.impl;
 
-import dao.EntityDao;
+import dao.ContextDao;
 import dao.FabricDao;
 
 /**
  * Created by Alex on 14.05.2015.
  */
 public class FabricDaoImpl implements FabricDao {
-    private BoardFileEntityDaoImpl boardFileEntityDao;
-    private BoardJsonEntityDaoImpl boardJsonEntityDao;
-    private ContextFileEntityDaoImpl contextFileEntityDao;
-    private ContextJsonEntityDaoImpl contextJsonEntityDao;
-    private UserFileEntityDaoImpl userFileEntityDao;
-    private UserJsonEntityDaoImpl userJsonEntityDao;
+    //private BoardFileEntityDaoImpl boardFileEntityDao;
+    //private BoardJsonEntityDaoImpl boardJsonEntityDao;
+    private ContextFileContextDaoImpl contextFileEntityDao;
+    private ContextJsonContextDaoImpl contextJsonEntityDao;
+    //private UserFileEntityDaoImpl userFileEntityDao;
+    //private UserJsonEntityDaoImpl userJsonEntityDao;
 
 
-    @Override
-    public boolean openConnection(EntityDao entityDao) {
+
+    public boolean openConnection(ContextDao contextDao) {
         return false;
     }
 
-    @Override
-    public boolean closeConnection(EntityDao entityDao) {
+
+    public boolean closeConnection(ContextDao contextDao) {
         return false;
     }
 
-    @Override
-    public EntityDao dataSource(EntityDao entityDao) {
-        return entityDao;
+
+    public ContextDao dataSource(ContextDao contextDao) {
+        return contextDao;
     }
 }

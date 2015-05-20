@@ -1,9 +1,17 @@
 package view;
 
 
+import dao.ContextDao;
+import dao.impl.ContextFileContextDaoImpl;
+import entity.Context;
+
+import java.util.List;
+
 public class ContextPage extends AbstractPage {
     String str;
     private static int count = 0;
+
+    private ContextDao contextDao = new ContextFileContextDaoImpl();
 
     public ContextPage(){
         System.out.println("constructor ContextPage" + (count++));
@@ -12,12 +20,11 @@ public class ContextPage extends AbstractPage {
     public void showPage() {
         System.out.println("*********************** Begin ContextPage *****************************");
         System.out.println();
-        System.out.println("LIST ContextPage");
-        System.out.println("LIST ContextPage");
-        System.out.println("LIST ContextPage");
-        System.out.println("LIST ContextPage");
-        System.out.println("LIST ContextPage");
-        System.out.println("LIST ContextPage");
+        List<Context> listContext = contextDao.select();
+        for(Context iter : listContext){
+            System.out.println(iter);
+        }
+
         System.out.println();
         System.out.println("***** Enter: ******");
         System.out.println("****** back  -> Back page ******");
